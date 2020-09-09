@@ -45,3 +45,8 @@ sysctl -w vm.overcommit_memory=1
 sysctl -w net.core.somaxconn=1024
 echo -n "never" > /tph/enabled
 ```
+
+## Limitations
+
+Because it uses hostPort, you should control on which nodes redis can be scheduled (to avoid changes in node external address). 
+The best way is to use LocalVolume 
